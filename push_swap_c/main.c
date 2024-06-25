@@ -6,11 +6,11 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:52:25 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/25 14:53:14 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:35:34 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push.h"
+#include "push.h"
 
 int	findalgo(t_check *checker)
 {

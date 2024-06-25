@@ -1,32 +1,61 @@
-SRCS 		= main.c \
-			src/test.c
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/06/25 15:07:51 by geonwkim          #+#    #+#              #
+#    Updated: 2024/06/25 20:22:59 by geonwkim         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+SRCS		= ./push_swap_c/main.c \
+			./push_swap_c/chunk_sort.c \
+			./push_swap_c/push_swap.c \
+			./push_swap_c/reverse_rotate.c \
+			./push_swap_c/rotate.c \
+			./push_swap_c/sort_multi_2.c \
+			./push_swap_c/sort_multi_utils.c \
+			./push_swap_c/sort_multi.c \
+			./push_swap_c/sort_per_num.c \
+			./push_swap_c/utils.c \
+			./push_swap_c/utils2.c
+SRCS_BONUS 	= ./check/main.c \
+			./check/utils.c \
+			./check/utils2.c \
+			./check/utils3.c \
+			./check/gnl/get_next_line.c \
+			./check/gnl/get_next_line_utils.c \
+			./check/push_n_swap.c \
+			./check/rotate.c
+
 OBJS		= $(SRCS:.c=.o)
-SRCS_BONUS	= bonus.c
 OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 
-NAME	= push_swap.a
+NAME		= push_swap
+NAME_BONUS	= checker
 CC		= cc
 RM		= rm -f
 CFLAGS	= -Wall -Wextra	-Werror
-LIBFT	= ./libft/libft.a
+INC_FIL = -Iinclude
 
 %.o:%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INC_FIL) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(MAKE) -C ./libft
-	cp libft/libft.a $(NAME)
-	ar -rcs $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS)
 
 all: $(NAME)
 
 clean:
-	$(MAKE) clean -C ./libft
 	$(RM) $(OBJS)
 
 fclean : clean
-	$(MAKE) fclean -C ./libft
 	$(RM) $(NAME)
+
+bonus: $(NAME_BONUS)
+	ar rcs $(NAME_BONUS) $(OBJS_BONUS)
 
 re: fclean	all
 

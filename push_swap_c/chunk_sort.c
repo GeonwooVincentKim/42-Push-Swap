@@ -6,11 +6,11 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:50:21 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/25 14:50:26 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:35:42 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push.h"
+#include "push.h"
 
 void	attribute_chunk(t_check *checker)
 {

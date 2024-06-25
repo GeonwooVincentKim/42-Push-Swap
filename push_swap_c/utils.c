@@ -6,11 +6,11 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:55:29 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/25 14:55:30 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:33:16 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push.h"
+#include	"push.h"
 
 long long int	ft_atoi(const char *str)
 {

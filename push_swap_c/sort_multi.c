@@ -6,11 +6,11 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:55:01 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/25 14:55:02 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:33:08 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push.h"
+#include	"push.h"
 
 int	reverse_or_rotate(t_check *checker, int nb, int a)
 {

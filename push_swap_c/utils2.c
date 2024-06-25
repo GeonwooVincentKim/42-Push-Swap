@@ -6,11 +6,11 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:55:42 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/25 14:55:43 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/25 20:27:04 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push.h"
+#include	"push.h"
 
 int	findargs(int argc, char **argv, t_check *checker)
 {
@@ -45,36 +45,51 @@ int	checkargs2(t_check *checker)
 {
 	if (checksamenum(checker) == -1)
 	{
-		my_putstr("Error\nArguments ");
-		ft_putnbr(checker->falseargs1 + 1);
-		my_putstr(" and ");
-		ft_putnbr(checker->falseargs2 + 1);
-		my_putstr(" or more are the same\n");
+		write(2, "Error\n", 6);
+		// my_putstr("Error\nArguments ");
+		// ft_putnbr(checker->falseargs1 + 1);
+		// my_putstr(" and ");
+		// ft_putnbr(checker->falseargs2 + 1);
+		// my_putstr(" or more are the same\n");
 		return (0);
 	}
 	return (1);
 }
 
+/**
+ * pin: -1
+ * -> Arguments could not be integers
+ * 
+ * pin: -2
+ * -> Arguments could be bigger than an integer
+ * 
+ * pin: -3
+ * -> Malloc allocation error
+*/
+// typedef enum e_errornb {
+// 	MALLOC_FAILUER,
+// 	NOT_INTERGER,
+// 	...
+// } t_errornb
+// int	checkargs(t_check *checker, t_errornb nb)
+
+
 int	checkargs(t_check *checker, int pin)
 {
 	if (pin == -1)
 	{
-		my_putstr("Error\nArguments ");
-		ft_putnbr(checker->falseargs);
-		my_putstr(" or more, are not integers\n");
+		write(2, "Error\n", 6);
 		return (-1);
 	}
 	if (pin == -2)
 	{
-		my_putstr("Error\nArguments ");
-		ft_putnbr(checker->falseargs + 1);
-		my_putstr(" or more, are bigger than an integer\n");
-		return (0);
+		write(2, "Error\n", 6);
+		return (-1);
 	}
 	if (pin == -3)
-		my_putstr("Malloc error\n");
+		write(2, "Error\n", 6);
 	if (pin == -3)
-		return (0);
+		return (-1);
 	if (checkargs2(checker) == 0)
 		return (0);
 	return (1);

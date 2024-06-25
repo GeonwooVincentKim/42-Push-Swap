@@ -6,11 +6,11 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:54:17 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/25 14:54:23 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:33:02 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push.h"
+#include	"push.h"
 
 int	nb_to_launch(t_check *checker, int chunk)
 {

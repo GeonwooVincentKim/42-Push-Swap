@@ -6,11 +6,11 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:53:03 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/25 14:53:21 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:35:26 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push.h"
+#include	"push.h"
 
 int	swapa(t_check *checker)
 {

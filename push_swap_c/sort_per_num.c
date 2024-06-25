@@ -6,11 +6,11 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:55:14 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/25 14:55:19 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:33:13 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push.h"
+#include	"push.h"
 
 void	sort2numbers(t_check *checker)
 {

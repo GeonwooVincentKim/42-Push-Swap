@@ -6,11 +6,11 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:54:43 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/25 14:54:47 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:33:05 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push.h"
+#include	"push.h"
 
 int	biggest_b(t_check *checker)
 {
