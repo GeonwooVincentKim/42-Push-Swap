@@ -1,33 +1,14 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/06/25 15:07:51 by geonwkim          #+#    #+#              #
-#    Updated: 2024/06/26 14:36:21 by geonwkim         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-SRC = push_swap.c \
-	push_swap_utils.c \
-	instructions.c \
-	sort.c \
-	sort_utils.c \
+SOURCES = \
+	push_swap.c push_swap_utils.c instructions.c sort.c sort_utils.c \
 	sort_big_utils.c
+BSOURCES = \
+	checker.c \
+	push_swap_utils.c instructions.c get_next_line.c
+OBJECTS = $(SOURCES:.c=.o)
+BOBJECTS = $(BSOURCES:.c=.o)
 
-BONUS_SRC = checker.c 
-	push_swap_utils.c \
-	instructions.c \
-	get_next_line.c
-
-OBJ = $(SRC:.c=.o)
-OBJ_BONUS = $(BONUS_SRC:.c=.o)
-
-CC 			= gcc
-CFLAGS 		= -Wall -Wextra -Werror
-RM			= rm -f
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
 
 all: push_swap
 
@@ -46,11 +27,11 @@ libft:
 	make -C libft bonus
 
 clean:
-	$(RM) $(OBJECTS) $(BOBJECTS)
+	rm -f $(OBJECTS) $(BOBJECTS)
 	make -C libft clean
 
 fclean: clean
-	$(RM) push_swap checker libft/libft.a
+	rm -f push_swap checker libft/libft.a
 
 re: fclean all
 

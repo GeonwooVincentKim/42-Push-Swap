@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_big_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbaddrul <hbaddrul@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 19:28:39 by hbaddrul          #+#    #+#             */
-/*   Updated: 2021/11/24 20:58:16 by hbaddrul         ###   ########.fr       */
+/*   Created: 2024/06/26 19:02:09 by geonwkim          #+#    #+#             */
+/*   Updated: 2024/06/26 19:11:49 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "libft/libft.h"
 
 static int	stack_idx_mid(t_list *stack, int num)
 {

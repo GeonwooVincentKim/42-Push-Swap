@@ -6,14 +6,13 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:03:41 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/26 16:14:12 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:42:57 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 #include <stdlib.h>
 #include "libft/libft.h"
-#include "push_swap.h"
 
 static int	is_int(char *str)
 {

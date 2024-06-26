@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbaddrul <hbaddrul@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/31 20:34:52 by hbaddrul          #+#    #+#             */
-/*   Updated: 2021/11/24 20:58:52 by hbaddrul         ###   ########.fr       */
+/*   Created: 2024/06/26 19:02:18 by geonwkim          #+#    #+#             */
+/*   Updated: 2024/06/26 19:06:25 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "libft/libft.h"
 
 static void	sort_3(t_list **stack)
 {

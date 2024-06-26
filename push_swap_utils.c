@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/29 14:34:22 by hbaddrul          #+#    #+#             */
-/*   Updated: 2024/06/26 16:18:22 by geonwkim         ###   ########.fr       */
+/*   Created: 2024/06/26 19:01:55 by geonwkim          #+#    #+#             */
+/*   Updated: 2024/06/26 19:49:44 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int	is_valid(char **strs)
 	ret = 0;
 	while (strs[i])
 	{
-		if (!is_int(strs[i]))
+		if (!is_int(strs[i++]))
 			return (ret);
 	}
 	nums = malloc(sizeof(int) * i);
