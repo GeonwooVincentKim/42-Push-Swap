@@ -6,57 +6,52 @@
 #    By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/25 15:07:51 by geonwkim          #+#    #+#              #
-#    Updated: 2024/06/25 20:22:59 by geonwkim         ###   ########.fr        #
+#    Updated: 2024/06/26 14:36:21 by geonwkim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= ./push_swap_c/main.c \
-			./push_swap_c/chunk_sort.c \
-			./push_swap_c/push_swap.c \
-			./push_swap_c/reverse_rotate.c \
-			./push_swap_c/rotate.c \
-			./push_swap_c/sort_multi_2.c \
-			./push_swap_c/sort_multi_utils.c \
-			./push_swap_c/sort_multi.c \
-			./push_swap_c/sort_per_num.c \
-			./push_swap_c/utils.c \
-			./push_swap_c/utils2.c
-SRCS_BONUS 	= ./check/main.c \
-			./check/utils.c \
-			./check/utils2.c \
-			./check/utils3.c \
-			./check/gnl/get_next_line.c \
-			./check/gnl/get_next_line_utils.c \
-			./check/push_n_swap.c \
-			./check/rotate.c
+SRC = push_swap.c \
+	push_swap_utils.c \
+	instructions.c \
+	sort.c \
+	sort_utils.c \
+	sort_big_utils.c
 
-OBJS		= $(SRCS:.c=.o)
-OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
+BONUS_SRC = checker.c 
+	push_swap_utils.c \
+	instructions.c \
+	get_next_line.c
 
-NAME		= push_swap
-NAME_BONUS	= checker
-CC		= cc
-RM		= rm -f
-CFLAGS	= -Wall -Wextra	-Werror
-INC_FIL = -Iinclude
+OBJ = $(SRC:.c=.o)
+OBJ_BONUS = $(BONUS_SRC:.c=.o)
 
-%.o:%.c
-	$(CC) $(CFLAGS) $(INC_FIL) -c $< -o $@
+CC 			= gcc
+CFLAGS 		= -Wall -Wextra -Werror
+RM			= rm -f
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $(OBJS)
+all: push_swap
 
-all: $(NAME)
+bonus: push_swap checker
+
+push_swap: $(OBJECTS) libft
+	gcc -o $@ $(OBJECTS) -Llibft -lft
+
+checker: $(BOBJECTS) libft
+	gcc -o $@ $(BOBJECTS) -Llibft -lft
+
+%.o: %.c
+	$(CC) -c $(CFLAGS) $?
+
+libft:
+	make -C libft bonus
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJECTS) $(BOBJECTS)
+	make -C libft clean
 
-fclean : clean
-	$(RM) $(NAME)
+fclean: clean
+	$(RM) push_swap checker libft/libft.a
 
-bonus: $(NAME_BONUS)
-	ar rcs $(NAME_BONUS) $(OBJS_BONUS)
+re: fclean all
 
-re: fclean	all
-
-.PHONY: all clean fclean re
+.PHONY: all bonus libft clean fclean re
