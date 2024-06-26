@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 01:44:29 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/26 19:35:24 by geonwkim         ###   ########.fr       */
+/*   Created: 2024/05/30 00:05:33 by geonwkim          #+#    #+#             */
+/*   Updated: 2024/06/26 19:35:34 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
+#include	<limits.h>
 
 static int	ft_check(char str_i, int sign, long ans)
 {
@@ -47,7 +48,7 @@ static long	ft_strtol(const char *str, int sign)
 	return (ans * sign);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atol(const char *str)
 {
 	int	sign;
 
@@ -61,24 +62,5 @@ int	ft_atoi(const char *str)
 	}
 	else if (*str == '+')
 		str++;
-	return ((int)ft_strtol(str, sign));
+	return ((long)ft_strtol(str, sign));
 }
-
-// int main()
-// {
-//     char *t_str[] = {
-//         "1234",
-//         "-123",
-//         "   +42",
-//         " ---+--+1234ab567",
-//         "0",
-//         "+-+-+-123",
-//         "   -+2147483647",
-//         " -2147483648"
-//     };
-//     int num_tests = sizeof(t_str) / sizeof(t_str[0]);
-//     for (int i = 0; i < num_tests; i++) {
-//         printf("ft_atoi(\"%s\") = %d\n", t_str[i], ft_atoi(t_str[i]));
-//     }
-//     return (0);
-// }

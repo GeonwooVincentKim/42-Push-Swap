@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 19:35:11 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/04/23 16:12:59 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:34:15 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,14 @@ void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
+
+// custom
+long	ft_atol(const char *str);
+int		ft_abs(int i);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+int		ft_isspace(int c);
+int		ft_numlen_check(int n, int base);
+char	*ft_itoa_base(int n, int base);
 
 // malloc
 void	*ft_calloc(size_t n_items, size_t size);
