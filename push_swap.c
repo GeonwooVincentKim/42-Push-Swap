@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 19:02:00 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/06/26 19:44:49 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/06/27 18:16:13 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ static void	ps_free(char **strs)
 		free(strs[i++]);
 	free(strs);
 }
+
+// __attribute__((destructor))
+// static void destructor() {
+//     system("leaks -q push_swap");
+// }
 
 int	main(int argc, char **argv)
 {
